@@ -1,0 +1,4 @@
+[submodule "libcogniot-rfid"]
+	path = libcogniot-rfid
+	url = git@github.com:CognIot/libcogniot-rfid.git
+	branch = master
