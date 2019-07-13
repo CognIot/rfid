@@ -35,6 +35,9 @@ int main()
 	strcpy(result, "");
 	length = strlen(result);
 	
+	 printf("reader build "BUILD_VERSION" (built "BUILD_DATE")\n");
+	 
+	
 	
 	if (wiringPiSetup () == -1){
 		fprintf (stdout, "Unable to start wiringPi: %s\n", strerror (errno)) ;
