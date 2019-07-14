@@ -35,7 +35,7 @@ int main()
 	strcpy(result, "");
 	length = strlen(result);
 	
-	 printf("reader build "BUILD_VERSION" (built "BUILD_DATE")\n");
+	 printf("reader\n======\n Build "BUILD_VERSION" \nbuilt "BUILD_DATE"\n");
 	 
 	
 	
