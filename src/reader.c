@@ -27,10 +27,10 @@ int main()
 
 	//int sPort = 0;		
 	int *fd = calloc(1, sizeof(int));	// Pointer to serial port
-	
-	char *result= calloc (1, sizeof(char));
-	
 	int	length = 0;
+	char *result= calloc (1, sizeof(char));
+	struct taginfo_struct taginfo;
+	
 	
 	strcpy(result, "");
 	length = strlen(result);
@@ -54,7 +54,9 @@ int main()
 	
 	printf("BEFORE CALL TO GetCmdResult\n");
 	printf("==============================================\n");
+	printf("Pointer 'length' in main  : %p\n", &length);
 	printf("Pointer 'result' in main  : %p\n", &result);
+	printf("Pointer 'fd' in main      : %p\n", &fd);
 	printf("Device Response in Main() : %s\n", result);
 	printf("RESPONSE LENGTH           : %d\n", length);
 	printf("\n\n");
@@ -71,6 +73,7 @@ int main()
 	printf("RESPONSE LENGTH           : %d\n", length);
 	printf("\n");
 	
+	DeCodeTag(taginfo);
 	
 	WaitForCTS(fd, GPIO_PIN);
 	SetTagMode(fd, TAGMODE_c);
@@ -85,7 +88,7 @@ int main()
 	printf("Pointer 'result' in main  : %p\n", &result);
 	printf("Device Response in Main() : %s\n", result);
 	printf("RESPONSE LENGTH           : %d\n", length);
-	printf("\n");
+	printf("\n\n");
 
 
 
